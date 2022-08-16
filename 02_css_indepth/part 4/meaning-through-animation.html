@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="rotate, scale, skew, translate">
+        <meta name="description" content="This is an extract from CSS-INDEPTH">
+        <title>meaning through animation</title>
+        <link rel="stylesheet" href="css/meaning-through-animation.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet"> <!--STYLESHEET LINK FOR GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form action="">
+            <form>
+                <label for="trip">Tell us about your first trip to the zoo:</label>
+                <textarea id="trip" name="about-my-trip" rows="5"></textarea>
+                <button type="submit" id="submit-button">save</button>
+            </form>
+        </form>
+
+        <!--For the loading effect-->  
+        <script type="text/javascript">
+            var input = document.getElementById('trip');
+            var button = document.getElementById('submit-button');
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                button.classList.add('is-loading');
+                button.disabled = true;
+                input.disabled = true;
+            });
+           </script>
+
+        <!--For the shake effect-->
+        <script type="text/javascript">
+            var input = document.getElementById('trip');
+            var button = document.getElementById('submit-button');
+            var timeout = null;
+            button.addEventListener('click', function(event) {
+            event.preventDefault();
+            clearTimeout(timeout);
+            button.classList.add('is-loading');
+            button.disabled = true;
+            input.disabled = true;
+            });
+            input.addEventListener('keyup', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+            button.classList.add('shake');
+            }, 1000);
+            });
+            button.addEventListener('animationend', function() {
+            button.classList.remove('shake');
+            });
+        </script>
+    </body>
+</html>

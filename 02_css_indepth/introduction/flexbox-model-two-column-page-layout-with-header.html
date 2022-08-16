@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox Model</title>
+        <style type="text/css">
+        :root {
+            font-size: calc(0.3em + 1vw);
+            box-sizing: border-box;
+        }
+        *, ::before, ::after {
+            box-sizing: inherit;
+        }
+        body * + * {
+            margin-top: 1.5em;
+        }
+        body {
+        background-color: #eee;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header {
+        color: #fff;
+        background-color: #0072b0;
+        border-radius: .5em;
+        padding: 1em 1.5em;
+        text-align: center;
+        }
+        .container {
+            display: flex;
+            margin-top: 1.5em;
+        }
+        .main {
+        background-color: #fff;
+        border-radius: .5em;
+        padding: 1em 1.5em;
+        width: 70%;
+        }
+        .sidebar {
+        padding: 1.5em;
+        background-color: #fff;
+        border-radius: .5em;
+        width: 30%;
+        margin-left: 1.5em;
+        margin-top: 0;
+        }
+        .button-link {
+        display: block;
+        padding: 0.5em;
+        color: #fff;
+        background-color: #0090C9;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        }
+        /*.button-link + .button-link {
+            margin-top: 1rem;
+        }
+        This code has been nolified by giving the whole page a margin-top of 1.5em with the help of the lobotomized owl selector*/
+        .sponsor-link {
+        display: block;
+        text-decoration: none;
+        color: #0090C9;
+        font-weight: bolder;
+        text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Franklin Running Club</h1>
+        </header>
+        <div class="container">
+            <main class="main">
+                <h2>Come join us!</h2>
+                <p>
+                The Franklin Running club meets at 6:00pm every Thursday
+                at the town square. Runs are three to five miles, at your
+                own pace.
+                </p>
+            </main>
+            <aside class="sidebar">
+            <a href="" class="button-link">Google</a>
+            <a href="" class="button-link">Bing</a>
+            <a href="" class="sponsor-link">become a sponsor</a>
+            </aside>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Practice on liquid display</title>
+        <style type="text/css">
+            body {
+                width: 80%;
+                margin: 0px auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-align: center;
+                text-transform: capitalize;
+                background-color: tomato;
+                color: white;
+                min-width: 700px;
+            }
+            #nav, #feature, #footer {
+                background-color: grey;
+                margin: 1%;
+                padding: 1%;
+            }
+            #nav {
+                background-color: white;
+            }
+            li {
+                display: inline;
+                padding: 0.5%;
+            }
+            .content {
+                width: 100%;
+                overflow: auto;
+            }
+            .col1, .col2, .col3 {
+                width: 30.3%;
+                float: left;
+                background-color: grey;
+                margin: 1%;
+                padding: 0.5%;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            li:hover {
+                background-color: tomato;
+                border-radius: 10px;
+                box-shadow: -1px -3px 10px black;
+            }
+        </style> 
+    </head>
+    <body>
+        <div id="header">
+            <h1>logo</h1>
+            <div id="nav">
+                <ul>
+                    <li><a href="">products</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">customer care</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">about</a></li>
+                </ul>
+            </div><!--nav-->
+        </div><!--header-->
+        <div class="content">
+            <div id="feature">
+                <p>feature</p>
+            </div>
+            <div class="article col1">
+                <p>column one</p>
+            </div>
+            <div class="article col2">
+                <p>column two</p>
+            </div>
+            <div class="article col3">
+                <p>column three</p>
+            </div>
+        </div><!--content-->
+        <div id="footer">
+            <p>&copy; Copyright 2011</p>
+        </div>
+    </body>
+</html>

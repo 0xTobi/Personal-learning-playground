@@ -1,0 +1,204 @@
+/*General styling*/
+
+/*When the fonts fail to load (or the loading times out), the .FONTS-FAILED class is 
+added to the page, and these fallback styles will be applied to the page. */
+
+html {
+    /*Defines a variable for each color, so they can be reused without having to state the hex again and again*/
+    --brand-green: hsl(162, 87%, 21%);
+    --dark-green: hsl(162, 88%, 30%);
+    --medium-green: hsl(162, 73%, 46%);
+    --text-color: hsl(210, 11%, 15%);
+    --gray: hsl(210, 7%, 56%);
+    --light-gray: hsl(210, 17%, 95%);
+    --extra-light-gray: hsl(210, 17%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(342, 63%, 46%);
+    color: var(--text-color);   /*Using the declared custom variable*/
+}
+:root {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4; /*Overides the default (line-height: normal;) and gives more vertical gap between lines of text*/
+    letter-spacing: 0.01em;
+    background-color: var(--extra-light-gray);  /*Using the declared custom variable*/
+}
+.fonts-failed body {
+    font-family: Helvetica, Arial, sans-serif;  /*If web fonts fail to load, falls back to system fonts*/
+}
+h1, h2, h3, h4 {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 0.01em;
+}
+.fonts-failed h1,
+.fonts-failed h2,
+.fonts-failed h3,
+.fonts-failed h4 {
+    font-family: Georgia, serif;  /*If web fonts fail to load, falls back to system fonts*/
+}
+p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; 
+}
+a {
+    color: var(--medium-green);   /*Using the declared custom variable*/
+}
+a:visited {
+    color: var(--brand-green);   /*Using the declared custom variable*/
+}
+a:hover {
+    color: var(--brand-green);   /*Using the declared custom variable*/
+   }
+a:active {
+    color: var(--red);   /*Using the declared custom variable*/
+}
+
+/*Navigation area styling*/
+.nav-container {
+    background-color: var(--medium-green);
+}
+.nav-container__inner {
+    display: flex;
+    justify-content: space-between;   /*Used to push the contents of the flex container to both edges.*/
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0.625em 0; 
+    align-items: flex-end;
+}
+.home-link {
+    color: var(--text-color);   /*Using the declared custom variable*/
+    font-size: 1.6rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.fonts-failed .home-link { /*If web fonts fail to load, falls back to system fonts*/
+    font-family: Georgia, serif;
+}
+.top-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0; 
+}
+.top-nav > li + li {
+    margin-left: 0.625em;
+}
+.top-nav a {
+    display: block;
+    font-size: 0.8rem; 
+    padding: 0.3rem 1.25rem;
+    color: var(--white);
+    background: var(--brand-green);   /*Using the declared custom variable*/
+    text-decoration: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em; 
+}
+.top-nav a:hover {
+    background-color: var(--dark-green);   /*Using the declared custom variable*/
+}
+.top-nav__featured > a:hover {
+    color: var(--medium-green);   /*Using the declared custom variable*/
+    background-color: var(--white);   /*Using the declared custom variable*/
+}
+
+/*Hero styling*/
+.hero {
+    background: url(../image/lion3.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 2.5rem;
+    background-position: center;
+}
+.hero__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 5.5475em 0 12.48em 0;  /*Using a calculated padding-top value to get an height of 95px from the top of the slogan to the top of the hero box.*/
+    text-align: right;
+}
+.hero h2 {
+    font-size: 1.95rem;
+    margin-top: 0;
+    margin-bottom: 0.61rem;
+    letter-spacing: -0.02;
+}
+.button {
+    display: inline-block;
+    padding: 0.4em 1em;
+    color: var(--brand-green);  /*Using the declared custom variable*/
+    border: 2px solid var(--brand-green);  /*Using the declared custom variable*/
+    border-radius: 0.2em;
+    text-decoration: none;
+    font-size: 0.8rem; 
+}
+.button:hover {
+    background-color: var(--dark-green);  /*Using the declared custom variable*/
+    color: var(--white);  /*Using the declared custom variable*/
+}
+.button--cta {
+    padding: 0.6em 1em;
+    background-color: var(--brand-green);  /*Using the declared custom variable*/
+    color: var(--white);  /*Using the declared custom variable*/
+    border: none;
+}
+
+/*Container styling*/
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+.tile-row {
+    display: flex;
+}
+.tile-row > * {     /*Used to select all direct children of the .tile-row class*/
+    flex: 1;
+}
+.tile-row * + * {
+    margin-left: 1.5625em;  /*Using a calculated value to set the margin-left value of 25px*/
+}
+.tile {
+    background-color: var(--white);  /*Using the declared custom variable*/
+    border-radius: 0.3em;
+    padding: 1.5625em;  /*Using a calculated value to set a padding value of 25px*/
+}
+.tile > h4 {
+    margin-bottom: 1.5em;  /*Using a calculated value to set the height from the bottom of the h4 element to top of the p element to 30px*/
+}
+.tile > * {
+    margin-left: 0;
+}
+/*This is the least important part of the page, so it doesn’t need to stand out. Instead, it blends in*/
+.page-footer {
+    margin-top: 3em;
+    padding: 1em 0;
+    background-color: var(--light-gray);
+    color: var(--gray);
+}
+.page-footer__inner {
+    margin: 0 auto;
+    max-width: 1080px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.tag-list {
+    list-style: none;
+    padding-left: 0;
+}
+.tag-list > li {
+    display: inline;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    background-color: var(--light-gray);
+    /*The gray background of items in one row will overlap with that of items in another row. The reason for 
+    this is the line height. If you add Padding to an inline element, the element itself will get taller, 
+    but it will not increase the height of the line of text. That’s determined exclusively by the LINE HEIGHT.*/
+    line-height: 2.6;
+    margin-left: 0;
+}

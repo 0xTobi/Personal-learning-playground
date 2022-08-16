@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Talks About</title>
+        <!-- <script src="1.js"></script> -->
+    </head>
+    <body> 
+        <!-- <h1>My home page</h1> 
+        <p>Hello, I am Marijn and this is my home page.</p> 
+        <p>I also wrote a book! Read it <a href="http://eloquentjavascript.net">here</a>.</p> -->
+
+
+        <!-- CHANGING THE DOCUMENT -->
+        <p>One</p> 
+        <p>Two</p> 
+        <p>Three</p>
+
+        <div id="lamba">
+            <h1>lala</h1>
+            <p>kdjksd</p>
+        </div>
+
+        <script> 
+            let paragraphs = document.body.getElementsByTagName("p");
+            document.body.insertBefore(paragraphs[2], paragraphs[0]);
+            // document.getElementById("lamba").appendChild(paragraphs[1])
+            // paragraphs[2].remove()
+            // document.body.replaceChild(paragraphs[2], paragraphs[0])
+        </script>
+
+
+
+        <!-- CREATING NODES -->
+        <p>
+            The <img src="image/wassap.png" alt="Whatsapp"> in the <img src="image/ig.png" alt="IG">.
+        </p>
+        <p><button onclick="replaceImages()">Replace</button></p>
+
+        <script> 
+            function replaceImages() { 
+                let images = document.body.getElementsByTagName("img");     // Retrieves an array of all the "img" tags in the body element.
+                for (let i = images.length - 1; i >= 0; i--) {              // Iterates iver each img element found, starting from the last one. Because the node list returned by getElementsNyTagName is live.
+                    let image = images[i];                                  
+                    if (image.alt) {                                        // If image has an alt attribute.
+                        let text = document.createTextNode(image.alt);      // Create a text node with the text from the image's alt attribute.
+                        image.parentNode.replaceChild(text, image);         // replaces the image node with the newly created text node.
+                    } 
+                }  
+            }
+        </script>
+
+
+        <!-- 
+            If you want a solid collection of nodes, as opposed to a live one, you can convert the collection to a real array by 
+            calling Array.from. 
+        -->
+        <script>
+            let arrayish = {0: "one", 1: "two", length: 2}; 
+            let array = Array.from(arrayish);
+            console.log(array.map(s => s.toUpperCase()));
+        </script>
+        
+        
+        <blockquote id="quote"> No book can ever be finished. While working on it we learn just enough to find it immature the moment 
+            we turn away from it.
+        </blockquote>
+        <script> 
+            function elt(type, ...children) { 
+                let node = document.createElement(type); 
+                for (let child of children) { 
+                    if (typeof child != "string") node.appendChild(child); 
+                    else node.appendChild(document.createTextNode(child));
+                } 
+                return node; 
+            }
+            
+            document.getElementById("quote").appendChild( 
+                elt("footer", "--", 
+                elt("strong", "Karl Popper"), 
+                ", preface to the second editon of ", 
+                elt("em", "The Open Society and Its Enemies"),
+                ", 1950"));
+        </script>
+
+
+
+        <!-- ATTRIBUTRES -->
+        <p data-classified="secret">The launch code is 00000000.</p> 
+        <p data-classified="unclassified">I have two feet.</p>
+        <script> 
+            let paras = document.body.getElementsByTagName("p"); 
+            for (let para of Array.from(paras)) { 
+                if (para.getAttribute("data-classified") == "secret") { 
+                    para.remove();
+                } 
+            }
+        </script>
+
+
+
+
+        <!-- LAYOUT -->
+        <p style="border: none; padding: 1em; box-shadow: 8px 8px 15px black; border-radius: 0.2em;";> 
+            I'm boxed in
+        </p>
+        <script> 
+            let para = document.body.getElementsByTagName("p")[0]; 
+            console.log("clientHeight:", para.clientHeight); 
+            console.log("offsetHeight:", para.offsetHeight);
+            console.log("allsides:", para.getBoundingClientRect());
+        </script>
+
+
+
+
+        <p><span id="one"></span></p> 
+        <p><span id="two"></span></p>
+
+        <script> 
+            function time(name, action) { 
+                let start = Date.now(); // Current time in milliseconds 
+                action();
+                console.log(name, "took", Date.now() - start, "ms");
+            }
+            time("naive", () => { 
+                let target = document.getElementById("one"); 
+                while (target.offsetWidth < 2000) {
+                    setTimeout(() => target.appendChild(document.createTextNode("X")), 500); 
+                }
+            }); 
+            // → naive took 32 ms
+            time("clever", function() { 
+                let target = document.getElementById("two"); 
+                target.appendChild(document.createTextNode("XXXXX")); 
+                let total = Math.ceil(2000 / (target.offsetWidth / 5));      // Math.ceil rounds a number to a whole number.
+                target.firstChild.nodeValue = "X".repeat(total);
+            });
+            // → clever took 1 ms
+        </script>
+
+
+
+
+        <!-- STYLING -->
+        <p><a href=".">Normal link</a></p> 
+        <p><a href="." style="color: green">Green link</a></p>
+        
+        This text is displayed <strong>inline</strong>, 
+        <strong style="display: block">as a block</strong>, and
+        <strong style="display: none">not at all</strong>.
+
+        <p id="para2" style="color: purple; font-family: 'Courier New', Courier, monospace;"> 
+            Nice text
+        </p>
+
+        <script> 
+            let para2 = document.getElementById("para2"); 
+            console.log(para2.style.color);
+            // let text = document.createTextNode(para.style.color)
+            // let node = document.createElement("sup")
+            // document.getElementById("para2").appendChild(node).appendChild(text) 
+            // para2.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif"
+            para2.style.color = "magenta";
+        </script>
+
+
+
+
+        <!-- CASCADING -->
+        <style> 
+            strong {
+                font-style: italic; 
+                color: gray;
+            }
+        </style>
+
+        <p>Now <strong>strong text</strong> is italic and gray.</p>
+
+
+
+
+        <!-- QUERY SELECTORS -->
+        <p>And if you go chasing 
+            <span class="animal">rabbits</span></p>
+        <p>And you know you're going to fall</p> 
+        <p>Tell 'em a <span class="character">hookah smoking 
+            <span class="animal">caterpillar</span></span></p>
+        <p>Has given you the call</p>
+
+        <script> function count(selector) { 
+            return document.querySelectorAll(selector).length;
+        }
+        console.log(count("p")); 
+        // → 4
+        console.log(count(".animal")); 
+        // → 2
+        console.log(count("p .animal"));
+        // → 2
+        console.log(count("p > .animal"));
+        // → 1
+        </script>
+
+
+
+
+
+        <!-- POSITIONING AND ANIMATING -->
+        To display an image that moves around in an ellipse
+
+        <p style="text-align: center"> 
+            <img src="image/ig.png" style="position: relative">
+        </p>
+
+        <script> 
+            let cat = document.querySelector("img"); 
+            let angle = Math.PI / 2; 
+            function animate(time, lastTime) { 
+                if (lastTime != null) { 
+                    angle += (time - lastTime) * 0.001;
+                }   
+                cat.style.top = (Math.sin(angle) * 20) + "px"; 
+                cat.style.left = (Math.cos(angle) * 200) + "px"; 
+                requestAnimationFrame(newTime => animate(newTime, time));   // requestAnimationFrame is not defined.
+            }
+            requestAnimationFrame(animate);
+        </script>
+    </body>
+</html>

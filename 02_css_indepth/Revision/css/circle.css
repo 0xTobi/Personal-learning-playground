@@ -1,0 +1,12 @@
+#circle {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-top: 3px solid red;
+    border-left: 3px solid red;
+    border-bottom: 3px solid blue;
+    border-right: 3px solid blue;
+    border-radius: 50px;
+    margin: 0px auto;
+    margin-top: 18em;
+}

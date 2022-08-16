@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TABLES
+        </title>
+        <link href="css/css.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h2 style="text-align: center; background-color: black; color: white;">TABLES</h2>
+        <h4>What is a table?</h4>
+        <p>A table is a representation of information in grid format. In HTML a table is written out row by row.</p>
+        <p>Below is an example of a simple table</p>
+        <br>
+        <table border="1">
+            <tr>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>200</td>
+                <td>450</td>
+                <td>800</td>
+            </tr>
+        </table>
+        <hr>
+        <!--Table heading "<th>"-->
+        <p>Now let's add the Table heading element.</p>
+        <p>The Table Heading element is used to represent the table heading for either a row or a column</p>
+        <p>Let's take an example</p>
+        <br>
+        <table>
+            <tr>
+                <th></th>
+                <th scope="col">Saturday</th>
+                <th scope="col">Sunday</th>
+            </tr>
+            <tr>
+                <th scope="row">Tickets sold</th>
+                <td>13</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th scope="row">Total sales</th>
+                <td>#50,000</td>
+                <td>#75,000</td>
+            </tr>
+        </table>
+        <hr>
+        <h3 style="text-align: center; background-color: black; color:white">Spanning Columns</h3>
+        <p>You might want a cell to run across more than one column. This can be achieved using the "colspan" attribute then specifying the number of colums you want the cell to run through. It can be used alongside a "th" or "td" element.</p>
+        <p>Let's take an example.</p>
+        <br>
+        <table>
+            <tr>
+                <th></th>
+                <th scope="col">9am</th>
+                <th scope="col">10am</th>
+                <th scope="col">11am</th>
+                <th scope="col">12am</th>
+            </tr>
+            <tr>
+                <th scope="row">Monday</th>
+                <td colspan="2">Maths</td>
+                <td>Eng</td>
+                <td>Bio</td>
+            </tr>
+            <tr>
+                <th scope="row">Tuesday</th>
+                <td colspan="3">Chem</td>
+                <td>Gym</td>
+            </tr>
+        </table>
+        <hr>
+        <h3 style="text-align: center; background-color:black; color:white;">Spanning Rows</h3>
+        <p>You might also want a cell to run across more than one row. This can be achieved using the "rowspan" attribute then specifying the number of rows you want the cell to run down the table. It can be used alongside a "th" or "td" element.</p>
+        <p>Let's take an example.</p>
+        <br>
+        <table>
+            <tr>
+                <th></th>
+                <th scope="col">AIT</th>
+                <th scope="col">NTA</th>
+                <th scope="col">LTV</th>
+            </tr>
+            <tr>
+                <th scope="row">6-8pm</th>
+                <td rowspan="2">Music</td>
+                <td>Cartoon</td>
+                <td rowspan="2">Comedy</td>
+            </tr>
+            <tr>
+                <th scope="row">8-10</th>
+                <td>movie</td>
+            </tr>
+        </table>
+
+        <!--Long Tables-->
+        <h3>Creating long tables</h3>
+        <p>There are some attributes to make use of while creating long tables, these attributes helps screen reader applications</p>
+        <p>let's take an example</p>
+        <hr>
+        <br>
+        <h3 id="longtable" style="text-align: center;">Long Tables</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Income</th>
+                    <th>Expenditure</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tr>
+                    <th>1st April</th>
+                    <td>#50,000</td>
+                    <td>#26,500</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th>#1,000,000</th>
+                        <th>#650,000</th>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+        <a href="#longtable">Go to table1</a>
+    </body>
+</html>

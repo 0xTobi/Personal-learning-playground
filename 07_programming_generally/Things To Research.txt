@@ -1,0 +1,7 @@
+Backward & Forward Compatibility
+DOM
+
+Escaping Characters in Javascript.
+
+"Side effect" is just a nerds way of saying 'this function changes some variables outside of the function'
+

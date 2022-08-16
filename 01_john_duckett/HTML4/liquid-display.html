@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>liquid display web page</title>
+        <style type="text/css">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            background-color: crimson;
+            color: whitesmoke;
+            max-width: 1300px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1::first-letter {
+            font-size: 170%;
+        }
+        li {
+            display: inline;
+            padding: 0.5%;
+        }
+        li:hover {
+            background-color: yellowgreen;
+            border-radius: 10px;
+            box-shadow: -3px -3px 3px black;
+        }
+        #content {
+            overflow: auto;
+        }
+        #nav, #feature, #footer {
+            background-color: rgba(80, 75, 75, 0.726);
+            margin: 1%;
+            padding: 1%;
+        }
+        .col1, .col2, .col3 {
+            width: 31.3%;
+            background-color: rgba(80, 75, 75, 0.726);
+            float: left;
+            margin: 1%;
+        }
+        #nav {
+            background-color: white;
+        }
+        a {
+            text-decoration: none;
+        }
+        </style>
+    </head>
+    <body>
+        <h3><ins>Liquid display</ins></h3>
+        <div class="header">
+            <h1>LOGO</h1>
+            <div id="nav">
+                <ul>
+                    <li><a href="">products</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">order</a></li>
+                    <li><a href="">address</a></li>
+                    <li><a href="">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="feature">
+                Feature
+            </div>
+            <div class="article col1">
+                <p>column one</p>
+            </div>
+            <div class="article col2">
+                <p>column two</p>
+            </div>
+            <div class="article col3">
+                <p>column three</p>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; Copyright 2011</p>
+        </div>
+    </body>
+</html>
