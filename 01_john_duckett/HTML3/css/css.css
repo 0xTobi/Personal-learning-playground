@@ -1,0 +1,8 @@
+body {
+    font-family: monospace, Arial, Helvetica, sans-serif; background-color: rgb(200,200,200); padding:30px
+}
+header h1 {
+    background-color: rgba(0,0,0,0.5); color:white; text-align: center;
+}
+h4 {background: #ee3e80; background-color: hsla(0,100%,50%,0.3); color:white}
+.paragraph {background-color: white; color:black; padding:inherit}

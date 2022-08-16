@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en-US">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="3d, transformation">
+        <meta name="description" content="This is an extract from CSS-INDEPTH">
+        <title>3D Transformations</title>
+        <link rel="stylesheet" href="css/3D-transformations.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300|Sansita:800" rel="stylesheet"> <!--STYLESHEET LINK FOR GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three</div>
+            <div class="box">Four</div>
+        </div>
+        <p>This method applies a perspective to a single element;
+            in this example, you’ve applied it directly to each box. It’s as if four separate pictures
+            were taken of each element, each from the same position.</p>
+        <div class="row2">
+            <div class="box2">One</div>
+            <div class="box2">Two</div>
+            <div class="box2">Three</div>
+            <div class="box2">Four</div>
+        </div>
+        <p> Sometimes you’ll want multiple elements to share a common perspective, as if they
+            all exist within the same 3D space. Figure 15.16 shows an illustration of this. These are
+            the same four elements, but they all reach into the distance toward a common vanishing point. It’s as if one picture was taken of all four elements together. To achieve this
+            effect, you’ll use the perspective property on their parent element.</p>
+
+            <hr>
+        <div class="container">
+            <div class="frame">
+                <div class="door door--open"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to CSS</title>
+        <meta name="description" content="An introduction to CSS">
+        <meta name="keywords" content="cascade, stylesheet, css,">
+        <meta name="robots" content="nofollow">
+        <link href="css/css.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <header id="main-header">
+        <h1>Introduction to CSS</h1>
+        </header>
+        <h3>How <i>CSS</i> rules cascade</h3>
+        <p>If there are two or more rules that apply to the same element, it is important to understand which will take precedence. </p>
+        <div class="rules">
+            <p class="first"><b>LAST RULE</b> <br>If the two selectors are identical, the latter of the two will take precedence. Here you can  see the second i selector takes precedence over the first.</p>
+            <p class="second">SPECIFY <br>If one selector is more specific than the others, the more specific rule will take precedence over more general ones. In this example:<br><br>h1 is more specific than * <br>p b is more specific than p <br>p#intro is more specific than p</p>
+            <p class="third">IMPORTANT <br>You can add !important after any property value to indicate that it should be considered more important than other rules that apply to the same element.</p>
+        </div>
+    </body>
+</html>

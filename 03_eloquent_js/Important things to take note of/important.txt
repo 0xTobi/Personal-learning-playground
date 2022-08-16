@@ -1,0 +1,69 @@
+Rest Parameter 
+--------------
+function listOut(...items) {
+	for (let elements of items) {
+		console.log(elements)
+	}
+}
+
+
+Destructuring - Chapter 4
+--------------------------
+let [from, to] = [10, 13]
+console.log(from)	//-> 10
+
+let {name, level} = {
+	name: "tobi",
+	level: 200
+}
+console.log(name) 	//-> "tobi"
+console.log(level) 	//-> 100
+
+
+Abstraction - Chapter 5
+------------------------
+Abstractions hide details and give us the ability to talk about problems at a higher (or more abstract) level
+
+
+Higher Order Function - Chapter 5
+----------------------------------
+These are functions that operate on other functions, either by taking them as arguments or by returning them.  Higher-order functions allow us to abstract over actions, not just values.
+
+
+Encapsulation - Chapter 6
+--------------------------
+Separating interface from implementation is usually called encapsulation.
+- interfaces are limited sets of functions or bindings that provide useful functionality at a more abstract level, hiding their precise implementation.
+
+
+The Document Object Model - Chapter 14
+---------------------------------------
+In the DOM, document.documentElement serves as the root.
+- Each DOM node object has a nodeType property, which contains a code (number) that identifies the type of node.
+- Elements have code 1
+- Text nodes have code 3 
+- Comments have code 8
+
+
+
+
+HTTP and Forms - Chapter 18
+----------------------------
+- HTTP
+- TCP
+- API
+
+
+A Client sends a Request
+A Server sends a Response
+
+A Server might me serving multiple host names on a single IP address. The "host" header helps specify which host name the client is trying to talk to.
+
+### Research about ESCAPING CHARACTERS.
+
+GET requests should be used for requests that do not have side effects but simply ask for information. 
+
+Requests that change something on the server, for example creating a new account or posting a message, should be expressed with other methods, such as POST.
+
+
+

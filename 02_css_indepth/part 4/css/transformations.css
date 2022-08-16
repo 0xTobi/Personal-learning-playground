@@ -1,0 +1,32 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.3em);
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: gainsboro;
+}
+.card {
+    max-width: 310px;
+    background-color: white;
+    padding: 1em;
+    transform: translate(20px, 0) rotate(15deg);
+}
+.card1 {
+    max-width: 310px;
+    background-color: white;
+    padding: 1em;
+    transform: translate(-20px, 0) rotate(-15deg);
+}
+img {
+    max-width: 100%;
+}
+.flex {
+    display: flex;
+}
+.flex > .card + .card {
+    margin-left: 1.5em;
+}

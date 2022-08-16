@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="lamba, transition, css in-depth">
+        <meta name="description" content="This is a sample page based on teachings from CSS IN-DEPTH">
+        <title>Transformations</title>
+        <link rel="stylesheet" href="css/transitions.css" type="text/css">
+    </head>
+    <body>
+        <button class="hover">Hover over me</button>
+        <div class="container">
+            <div class="box"></div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown__toggle">menu</button>
+            <div class="dropdown__drawer">
+                <ul class="menu">
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/features">Pricing</a></li>
+                    <li><a href="/features">Support</a></li>
+                    <li><a href="/features">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <p><a href="/read-more">Read more</a></p> 
+
+<!--Here, you’ve split the transition into two sets of values. This defines the fade-out
+behavior. The first set of values transitions the opacity for 0.2 seconds. The second set
+transitions the visibility for 0 seconds (an instant) after 0.2 seconds of delay. This
+means the opacity transitions first and when it ends, the visibility transitions. This
+enables the menu to fade out slowly, then, when it’s fully transparent, the visibility
+switches to hidden. The user can then click the Read more link without the menu
+interfering.
+ When the menu fades in, you’ll need the order to be different: visibility needs to
+toggle on immediately, followed by an opacity transition. This is why, in the second
+ruleset, you changed the transition delay to 0s. This way, visibility is hidden while the
+menu is closed, but visible throughout both the fade-in and fade-out transitions.-->
+
+        <script type="text/javascript">
+            (function () {
+            var toggle = document.getElementsByClassName('dropdown__toggle')[0];
+            var dropdown = toggle.parentElement;
+            toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            dropdown.classList.toggle('is-open');
+            });
+            }());
+        </script>
+    </body>
+</html>

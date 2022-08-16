@@ -1,0 +1,13 @@
+body {background-color:cyan; padding: 100px;}
+h1 {color: green; font-family:monospace; text-align: center;}
+h3>i {color: green}
+p.first {color: blue}
+p.second {color: red}
+p.third {color: purple}
+p b {color:black}
+.rules {border:1px red; background-color: saddlebrown; padding: inherit;}
+
+
+head {
+    border: 2px dashed black;
+}

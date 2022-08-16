@@ -1,0 +1,84 @@
+Chapter 1 ---------------------------------------------------
+
+Important files to take note of.
+
+public/index.html 
+This is the HTML file that is loaded by the browser. It contains an element in which the application is displayed and a script element that loads the application’s JavaScript files.
+
+src/index.js 
+This is the JavaScript file that is responsible for configuring and starting the React application. I use this file to add the Bootstrap CSS framework to the application in the next section.
+
+src/App.js
+This is the React component, which contains the HTML content that will be displayed to the user and the JavaScript code required by the HTML. Components are the main building blocks in a React application, and you will
+see them used throughout this book.x
+
+
+The data that is received by a child component through its props is read-only and must not be altered.
+
+Data props allow a parent to provide data to a child, and
+Function props allow a child to communicate with this parent.
+
+
+create file through terminal 
+Method 1:  type > filename
+Method 2:  touch filename
+
+
+
+User information can be preserved when navigating away from an application by using localStorage along side with componentDidMount
+
+
+
+Chapter 2 ---------------------------------------------------
+There are two basic kinds of web applications:
+1. Round-trip
+2. Single-page
+
+ROUND-TRIP
+In this type of web app the browser requests an initial HTML doc from the server, then user interactions such as button, links, leads the browser to request and receive a completely new HTML doc.
+
+
+SINGLE-PAGE
+In this type of Web application an initial HTML document is sent to the browser, but user interactions leads to HTTP requests for small fragments of data inserted into the existing set of elements being displayed to the user.
+
+
+*** React is well suited for Single page web apps.
+
+
+
+Chapter 3 -----------------------------------------------------
+In a react application the contents of the static index.html in the public folder are combined with the HTML elements created dynamically by react to produce an HTML document that the browser displays to the user.
+
+
+Chapter 4 -----------------------------------------------------
+The "export" keyword is used to denote the features that will be available outside the module.
+
+The "Default" keyword is used when the module contains a single feature.
+
+Import an unnamed default variable 
+Importing a named variable - Use curly bracket.
+
+
+- CHANGING MODULE FEATURE NAMES
+
+When importing named features from modules, you may find that there are two modules that use the same name or that the name used by the module doesn’t produce readable code when it is imported.
+
+import { multiply, subtract as deduct } from "./operations";
+
+
+- IMPORTING AN ENTIRE MODULE
+
+Listing the names of all the functions in a module gets out of hand for complex modules. A more elegant approach is to import all the features provided by a module and just use the features you require
+
+import * as ops from "./operations";
+
+
+- PROMISES
+
+Invoking the callback function is known as resolving the promise.
+
+
+
+CHAPTER 5 ------------------------------------------------------
+
+When installing packages from the command line, the arguement "--save-dev" is used to indicate that the package being installed will be used during development, and will not be part of the app when it is deployed.

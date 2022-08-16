@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sample 960grid webpage</title>
+        <link rel="stylesheet" href="css/960_12_col.css" type="text/css">
+        <style type="text/css">
+        body {
+            background-color: dimgray;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: capitalize;
+            margin: 0px;
+            color: white;
+        }
+        .header {
+            background-color: grey;
+            margin-top: 0px 0px 10px 0px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+            padding: 10px;
+        }
+        .logo {
+            margin-bottom: 5px;
+        }
+        h1 {
+            margin-top: 140px;
+            font-size: 250%;
+            text-transform: uppercase;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: right;
+        }
+        h3 {
+            font-size: 150%;
+            border-top: 3px solid white;
+            padding-top: 20px;
+        }
+        .nav {
+            padding: 15px 0px 0px 0px;
+            text-align: right;
+            float: right;
+        }
+        .intro {
+            clear: both;
+        }
+        #date {
+            font-size: 70%;
+        }
+        .wrapper {
+            width: 960px;
+            text-align: left;
+            margin: 0px auto;
+        }
+        .more_articles p {
+            border-bottom: 1px solid white;
+            font-size: 80%;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .more_articles p:last-child {
+            border-bottom: none;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            margin-right: 5px;
+            padding: 5px;
+        }
+        .nav a:hover, h1 a:hover, h3 a:hover, .footer a:hover {
+            background-color: greenyellow;
+            border-radius: 5px;
+        }
+        .more_articles a:hover {
+            color: white
+        }
+        .footer {
+            background-color: grey;
+            clear: both;
+            padding: 5px 10px;
+            text-align: right;
+            font-size: 110%;
+            font-family: fantasy;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container_12">
+                <div class="grid_5">
+                    <img src="images/logo/cys.gif" alt="cyber security department" title="cys logo" width="267" height="70">
+                    <img src="images/logo/chef.png" alt="ibirdchef official logo" width="100" title="ibird chef logo" height="70" class="logo">
+                </div>
+                <div class="nav grid_7">
+                    <p>
+                        <a href="">home</a> 
+                        <a href="">about</a> 
+                        <a href="">products</a> 
+                        <a href="">servicing</a> 
+                        <a href="">contact us</a>
+                    </p>
+                </div>
+            </div><!--container_12-->
+        </div><!--header-->
+        <div class="wrapper">
+            <div class="main_article container_12">
+                <div class="grid_6 push_6">
+                    <h1><a href="">fixed gear forever</a></h1>
+                </div>
+                <div class="intro grid_3 push_9">
+                    <p id="date">23<ins>rd</ins> may 2020</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum atque laborum quae consequuntur dolorum veritatis architecto veniam, rem dolores voluptas harum perferendis cumque at voluptate dignissimos reprehenderit optio enim nam quo excepturi. At veniam aperiam nobis ipsa distinctio! Perspiciatis eveniet inventore totam beatae porro maxime id iure libero consequuntur rem.</p>
+                </div>
+            </div><!--main_article-->
+            <div class="more_articles container_12">
+                <h3 class="grid_12"><a href>more articles</a></h3>
+                <div class="grid_3">
+                    <img src="images/loop.jpg" alt="brick" width="200" height="100">
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferekshdkshndis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perfsdjhsjdhsjdhsjdgsjerendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                </div>
+                <div class="grid_3">
+                    <img src="images/bridge.jpg" alt="brick" width="200" height="100">
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                </div>
+                <div class="grid_3">
+                    <img src="images/cyber.jpg" alt="brick" width="200" height="100">
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                </div>
+                <div class="grid_3">
+                    <img src="images/lion.png" alt="brick" width="200" height="100">
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                    <p><a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, perferendis.</a></p>
+                </div>
+            </div><!--more_articles-->
+        </div><!--wrapper-->
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright &copy; Pedal Faster 2011</a></p> 
+            </div>
+        </div>
+    </body>
+</html>

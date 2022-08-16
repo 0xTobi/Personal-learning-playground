@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMAGES</title>  
+        <style type="text/css">
+        body {
+            margin: 0px;
+            min-width: 700px;
+            color: dimgrey;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: url("images/backgrounds/green2.jpg");
+        }
+        .body {
+            padding: 20px;
+            width: 1000px;
+            margin: 0px auto;
+        }
+        h1 {
+            text-align: center;
+            background-color: crimson;
+            color: white;
+            margin: 0px;
+        }
+        h1::first-letter {
+            font-size: 200%;
+        }
+        h4 {
+            border-top: 4px solid crimson;
+            padding-top: 10px;
+            border-bottom: 4px solid crimson;
+            padding-bottom: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .small {
+            width: 100px;
+            height: 100px;
+        }
+        .medium {
+            width: 250px;
+            height: 250px;
+        }
+        .large {
+            width: 500px;
+            height: 500px;
+            padding-top: 10px;
+        }
+        .clear {
+            clear: right;
+        }
+        img.align-left {
+            float: left;
+            padding-right: 10px;
+        }
+        img.align-right {
+            float: right;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        img.center-align {
+            display: block;
+            margin: 0px auto;
+            padding-bottom: 10px;
+        }
+        .footer {
+            background-color: crimson;
+            margin-bottom: 0px;
+        }
+        .footer p {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 0px;
+            color: white;
+            font-size: 140%;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Images</h1>
+        <div class="body">
+        <h4>Sizing Images using CSS</h4>
+        <img src="images/random/girl.jpg" alt="A beautiful girl" class="small">
+        <img src="images/random/girl.jpg" alt="A beautiful girl" class="medium">
+        <img src="images/random/girl.jpg" alt="A beautiful girl" class="large">
+        <br><br><br>
+        <br><br><br>
+        <h4>Aligning Images using CSS</h4>
+        <p><img src="images/random/girl.jpg" alt="A beautiful girl" class="align-left medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum impedit nostrum voluptatum eligendi? Officiis natus sed explicabo eum aspernatur molestias maxime dolores vel asperiores ipsa. Accusantium quidem magni pariatur est.</p>
+        <p><img src="images/random/girl.jpg" alt="A beautiful girl" class="align-right medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet assumenda eligendi praesentium vitae quaerat aperiam in quibusdam omnis beatae placeat.</p>
+        <br><br><br>
+        <br><br><br>
+        <h4 class="clear">Centering Images using CSS</h4>
+        <p><img src="images/random/girl.jpg" alt="A beautiful girl" class="center-align medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam quidem explicabo aut iusto delectus. Eum, enim veniam. Aut ipsum cum illum, nobis possimus doloribus assumenda consequatur necessitatibus minus earum labore a debitis asperiores aliquid numquam laborum vero eos rerum quisquam nisi? Molestias minima cum tempora sed magnam aperiam recusandae.</p>
+        </div><!--Body-->
+        <div class="footer">
+            <p>&copy; Copyright 2011</p>
+        </div>
+    </body>
+</html>

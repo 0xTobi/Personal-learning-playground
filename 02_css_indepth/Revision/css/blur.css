@@ -1,0 +1,74 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.4em);
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    color: hsl(0, 60%, 95%);
+}
+.background {
+    background: url(../images/book-desktop.jpg) no-repeat, radial-gradient(hsl(240, 100%, 80%), hsl(0, 0%, 10%));
+    background-blend-mode: soft-light;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.nav__menu {
+    margin: 0;
+    padding-top: 1em;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav__menu > li + li {
+    margin-left: 1em;
+}
+.nav__menu > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1.5em;
+    color: #fff;
+}
+.nav__menu > li > a:hover {
+    color: hsl(39, 70%, 60%);
+}
+.line {
+    width: 1.5em;
+    border-top: 3px solid white;
+    padding-top: 1.7em;
+    margin: 0 auto;
+}
+.button {
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 0.4em 1.1em;
+    border-radius: 0.15em;
+    color: white;
+    cursor: pointer;
+    font-size: inherit;
+}
+.button:hover {
+    color: hsl(39, 70%, 60%);
+    border-color: hsl(39, 70%, 60%);
+}
+.intro {
+    max-width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.circle {
+	width: 20px;
+	height: 20px;
+	border: 4px solid black;
+	border-radius: 2px;
+	background-color: red;
+}

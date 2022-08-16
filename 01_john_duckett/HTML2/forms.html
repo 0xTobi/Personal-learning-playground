@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms in HTML</title>
+        <style type="text/css">
+        body {background-color: chocolate;}
+        h2 {color:white; background-color: black; text-align: center; font-family:Georgia, 'Times New Roman', Times, serif}
+        h3 {color:ghostwhite}
+        h4 {color:greenyellow}
+        </style>
+    </head>
+    <body>
+        <h2>FORMS</h2>
+        <hr>
+        <h3>In this section we'll be looking at how to add various kinds of forms to our webpages.</h3>
+        <!--I did a rough work here, there's supposed to be a different form control address for each form-->
+        <h4>TEXT INPUT</h4>
+        <form action="JohnDuckett.html/login.php" method="">
+            <p>Username
+                <input type="text" name="username" maxlength="30" />
+            </p>
+            <!--A form action is supposed to be here-->
+            <h4>PASSWORD INPUT</h4>
+            <p>Password
+                <input type="password" name="password" maxlength="30" />
+            </p>
+            <!--A form action is supposed to be here-->
+            <h4>COMMENT AREA</h4>
+            <p>What do you think of Tobi Aderibigbe</p>
+            <textarea name="comments" cols="20" rows="4" style="font-size: inherit;">Enter your comments....</textarea>
+            <br>
+            <!--A form action is supposed to be here-->
+            <h4>RADIO BUTTON</h4>
+            <p>Please select your favourite Musician
+                <br>
+                <input type="radio" name="musician" value="davido" /> Davido
+                <input type="radio" name="musician" value="wizkid" checked="checked" /> Wizkid
+                <input type="radio" name="musician" value="olamide" /> Olamide
+            </p>
+            <br>
+            <!--A form action is supposed to be here-->
+            <h4>CHECKBOX</h4>
+            <p>Please select your favourite music player
+                <br>
+                <input type="checkbox" name="player" value="itunes" /> itunes
+                <input type="checkbox" name="player" value="google_music_player" /> Google music player
+                <input type="checkbox" name="player" value="lark_player" checked="checked" /> Lark player
+            </p>
+            <h4>DROPDOWN LIST BOX</h4>
+            <p>Select your favourite football team</p>  
+                <select name="team">
+                    <option value="man_u">Manchester United</option>
+                    <option value="chelsea">Chelsea</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="madrid">Madrid</option>
+                </select>
+            <h4>MULTIPLE SELECT BOX</h4>
+            <p>Which of the following instruments can you play perfectly? <br>You can choose more than one option by holding the CTRL key on your keyboard and selecting the desired options</p>
+            <select name="Instruments" size="3" multiple="multiple">
+                <option value="guitar" selected="selected">Guitar</option>
+                <option value="drum">Drum</option>
+                <option value="Violin" selected="selected">Violin</option>
+                <option value="piano" selected="selected">Piano</option>
+            </select>
+            <h4>FILE INPUT BOX</h4>
+            <!--Here i'm forced to use a different form action element because the method used in uploading a file is the "POST" method-->
+            <form action="another.html" method="post">
+                <p>Please upload your favourite music for 2019</p>
+                <input type="file" name="fav-music"> <br><br>
+                <input type="button" value="upload">
+            </form>
+            <h4>SUBMIT BOX</h4>
+            <!--Notice the method used here is "GET"-->
+            <p>Subscribe for email notification of new products from us</p>
+            <input type="text" name="email">
+            <input type="submit" name="subscribe" value="subscribe">
+            </form>
+            <h4>IMAGE BUTTON</h4>
+            <p>Here we'll use an image to represent the submit button</p>
+            <form action="another.html" method="get">
+            <p>Subscribe to our email list</p>
+            <input type="text" name="email">
+            <input type="image" src="images/brick.jpg" width="100" height="20">
+            </form>
+            <h4>BUTTONS AND HIDDEN CONTROLS</h4>
+            <p>This allows you to add both images and text to a button</p>
+            <br>
+            <form action="another.html" method="GET">
+                <button><img src="images/bridge.jpg" alt="add" width="10" height="10"/>Add</button>
+                <input type="hidden" name="bookmarks" value="lyrics" />
+            </form>
+            <h4>LABELLING FORM CONTROL</h4>
+            <p>Label control can be used in two ways <br>1) Wrap arounnd the text description and form input <br>2) Kept seperate from the form control</p>
+            1) <br>
+            <label>AGE: <input type="text" name="age"</label>
+            <br>
+            2) <br>
+            Gender:
+            <input id="female" type="radio" name="gender" value="f">
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender" value="m">
+            <label for="male">Male</label>
+            <br>
+            <h4>GROUPING FORM CONTROLS</h4>
+            <p>Form controls can be grouped togrther using the <!--<Fieldset>--> "fieldset" element</p>
+            <fieldset>
+                <legend>Contact details</legend>
+                <label>Email: <br>
+                <input type="text" name="email"></label><br>
+                <label>Phone no: <br>
+                <input type="text" name="phone" maxlength="11"></label><br>
+                <label>Address: <br>
+                <input type="text" name="address"></label>
+                
+            </fieldset>
+            <br>
+            <h4>FORM VALIDATUION</h4>
+            <p>Returns message to user if the form has not been filled correctly</p>
+            <br>
+            <form action="another.html" method="get">
+                <fieldset>
+                    <legend>User details</legend>
+                <label for="username">Username</label><br>
+                <input type="text" name="username" required="required" maxlength="30">
+                <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" required="required" maxlength="15">
+                <br>
+                <input type="submit" name="submit">
+                </fieldset>
+            </form>
+            <br>
+            <h4>DATE INPUT</h4>
+            <p>Allows user to input date conviniently</p>
+            <br>
+            <form action="forms.html" method="get">
+                <label for="departure_date">Departue date :</label>
+                <input type="date" name="depart" required="required">
+                <br>
+                <input type="submit" value="submit">
+            </form>
+            <br>
+            <h4>EMAIL & URL INPUT</h4>
+            <p>Allows user to input Emails and Urls alone</p>
+            <br>
+            <form action="forms.html" method="get">
+                <label for="email">Email</label><br>
+                <input type="email" name="email">
+                <input type="submit" value="submit">
+                <hr>
+                <label for="url">URL</label><br>
+                <input type="url" name="url">
+                <input type="submit" value="submit">
+            </form>
+            <br>
+            <iframe
+                src="another.html" 
+                height="450"
+                width="450"
+            </iframe>
+            <br>
+            <h4>SEARCH INPUT</h4>
+            <form action="blog.html" method="get">
+                <p>Search</p>
+                <input type="search" name="search" placeholder="Enter keyword">
+                <input type="submit" value="search">
+            </form>
+            <br>
+            <br>
+            <h4>So what have i learnt so far</h4>
+            <p>See</p>
+            <form action="forms.html" method="get">
+                <fieldset>
+                    <legend>
+                        Your Details:
+                    </legend>
+                    <label>Name: <input type="text" name="name" size="30" maxlength="100"></label>
+                    <br>
+                    <br>
+                    <label>Email: <input type="email" name="email" size="30" maxlength="100"></label>
+                    <br>
+                </fieldset>
+                <br>
+                <div id="review">
+                <fieldset>
+                    <legend>Your Review: </legend>
+                    <p>
+                    <label for="hear-about">
+                        How did you hear about us?
+                    </label>
+                    <select name="referrer" id="hear-about">
+                        <option value="google">Google</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                    </select>
+                    </p>
+                    <p>
+                        Would you visit again?
+                        <br>
+                        <label><input type="radio" name="rating" value="yes"> yes</label><br>
+                        <label><input type="radio" name="rating" value="no"> No</label><br>
+                        <label><input type="radio" name="rating" value="maybe"> Maybe</label>
+                    </p>
+                    <p>
+                        <label for="comments">Comments: 
+                        <label><textarea rows="4" columns="40" id="comments"></textarea>
+                        </label>
+                    </p>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="subscribe" checked="checked">Sign me up for email updates 
+                        </label>
+                        <br>
+                        <br>
+                        <input type="submit" value="submit review">
+                </fieldset>
+                </div>
+            </form>
+            
+    </body>
+</html>

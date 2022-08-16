@@ -1,0 +1,92 @@
+:root {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body * + * {
+    margin-top: 1.5em;
+}
+.hover {
+    background-color: hsl(180, 50%, 50%);
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    padding: .3em 1em;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.hover:hover {
+    background-color: hsl(0, 50%, 50%);
+    border-radius: 1em;
+}
+.container {
+    position: relative;
+    height: 30px;
+}
+.box {
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: hsl(130, 50%, 50%);
+    transition: all 1s linear;
+}
+.container:hover .box {
+    left: 400px;
+    background-color: hsl(0, 50%, 50%);
+    border-radius: 1em;
+}
+.dropdown * {
+    margin-top: initial;
+}
+.dropdown__toggle {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid hsl(280, 10%, 80%);
+    color: hsl(280, 30%, 60%);
+    background-color: white;
+    font: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+.dropdown__toggle:hover {
+    background-color: hsl(280, 15%, 80%);
+}
+.dropdown__drawer {
+    position: absolute;
+    /*display: none;*/   /*Replaced by the "opacity: 0" property because "display:" property can't be animated*/
+    background-color: white;
+    width: 10em;
+    opacity: 0;  /*TRANSPARENT when closed*/
+    visibility: hidden;  /*HIDDEN when closed*/
+    transition: opacity 0.2s linear,
+                visiblity 0s linear 0.2s;  /*Delays the visibility transition 0.2s*/
+}
+.dropdown.is-open .dropdown__drawer {
+    opacity: 1;  /*Fully OPAQUE when the is-open class is activated*/
+    visibility: visible; /*fully VISIBLE when the is-open clas is activated*/
+    transition-delay: 0s;  /*Removes the transition delay while the is-open class is applied*/
+}
+.menu {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid gainsboro;
+}
+.menu > li + li > a {
+    border-top: 0;
+}
+.menu > li > a {
+    display: block;
+    padding: 0.5em 1em;
+    color: hsl(280, 40%, 60%);
+    background-color: white;
+    text-decoration: none;
+    transition: all .2s linear;
+    border: 1px solid hsl(280, 10%, 80%);
+}
+.menu > li > a:hover {
+    background-color: hsl(280, 15%, 95%);
+    color: hsl(280, 25%, 10%);
+}

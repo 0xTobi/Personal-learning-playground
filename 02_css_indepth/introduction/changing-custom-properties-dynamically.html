@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing custom properties dynamically</title>
+        <style type="text/css">
+        :root {
+        --main-bg: #fff;
+        --main-color: #000; 
+        font-size: calc(0.5em + 1vw);
+        --main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .panel {
+        font-size: calc(0.5em + 1vw);
+        padding: 1em;
+        border: 1px solid #999;
+        border-radius: 0.5em;
+        background-color: var(--main-bg);
+        color: var(--main-color);
+        font-family: var(--main-font);
+        }
+        .panel > h2 {
+        margin-top: 0;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        }
+        .dark {
+            margin-top: 2em;
+            padding: 1em;
+            background-color: #999;
+            --main-bg: #333;
+            --main-color: #fff;
+        }
+        </style>
+    </head>
+    <body>
+            <div class="panel">
+                <h2>Single-origin</h2>
+                <div class="body">
+                We have built partnerships with small farms
+                around the world to hand-select beans at the
+                peak of season. We then careful roast in
+                small batches to maximize their potential.
+                </div>
+            </div>
+            <aside class="dark">
+                <div class="panel">
+                    <h2>Single-origin</h2>
+                    <div class="body">
+                    We have built partnerships with small farms
+                    around the world to hand-select beans at the
+                    peak of season. We then careful roast in
+                    small batches to maximize their potential.
+                    </div>
+                </div>
+            </aside>
+    </body>
+</html>

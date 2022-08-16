@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>Poetry Events</title>
+        <meta name="description" content="Poetry workshop">
+        <meta name="keywords" content="poet, poetry, poetic, workshop">
+        <link href="css/poetry_event.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="home">
+        <h1>poetry workshops</h1>
+        <p id="introduction">We will be conducting a number of poetry workshops and symposium throughout the year. <br>
+        Please note that the following events are free to members:</p>
+        <!--List of free events-->
+        <ul>
+            <li>A poetic perspective</li>
+            <li>Walt Whitman at war</li>
+            <li>Found poems and outsider poetry</li>
+        </ul>
+        <!--Schedule for events-->
+        <table>
+            <tr class="head">
+                <th class="hea"></th>
+                <th class="hea">New York</th>
+                <th class="hea">Chicago</th>
+                <th class="hea">San Fransisco</th>
+            </tr>
+            <tr class="shade1">
+                <th class="col">A poetic perspective</th>
+                <td>Sat, 4 Feb 2012 <br>11am-2pm</td>
+                <td>Sat, 4 Feb 2012 <br>3am-5pm</td>
+                <td>Sat, 4 Feb 2012 <br>6am-9pm</td>
+            </tr>
+            <tr class="shade2">
+                <th class="col">Walt Whitman at war</th>
+                <td>Sun, 5 Feb 2012 <br>11am-2pm</td>
+                <td>Sun, 5 Feb 2012 <br>3am-5pm</td>
+                <td>Sun, 5 Feb 2012 <br>6am-9pm</td>
+            </tr>
+            <tr class="shade1">
+                <th class="col">Found poems and outsider poetry</th>
+                <td>Mon, 6 Feb 2012 <br>11am-2pm</td>
+                <td>Mon, 6 Feb 2012 <br>3am-5pm</td>
+                <td>Mon, 6 Feb 2012 <br>6am-9pm</td>
+            </tr> 
+            <tr class="shade2">
+                <th class="col">Natural death an exploration</th>
+                <td>Tue, 7 Feb 2012 <br>11am-2pm</td>
+                <td>Tue, 7 Feb 2012 <br>3am-5pm</td>
+                <td>Tue, 7 Feb 2012 <br>6am-9pm</td>
+            </tr>
+        </table>
+        <!--User Intererest-->
+        <form action="google.com" method="GET">
+            <fieldset>
+                <legend><i>Register your interest</i></legend>
+                <div class="new">
+                <label for="name" class="title">Your Name:</label>
+                <input type="text" name="name" required:"required">
+                </div>
+                <br>
+                <div class="new">
+                <label for="email" class="title">Email:</label>
+                <input type="email" name="email" maxlength="50" required:"required">
+                </div>
+                <div class="new">
+                <p><label for="location" class="title">Your closest center</label>
+                <select name="location" id="location">
+                    <option value="ny">New york</option>
+                    <option value="ch">Chicago</option>
+                    <option value="sf">San Fransisco</option>
+                </select>
+                </p>  
+                </div>
+                <div class="new">
+                <p><label for="member" class="title">Are you a member?</label>
+                <input type="radio" name="member" value="yes">yes
+                <input type="radio" name="member" value="no">no
+                </p>
+                </div>
+            </fieldset>
+            <br>
+            <input type="submit" name="submit" value="Submit" id="submit">
+        </form>
+        </div>  
+    </body>
+</html>

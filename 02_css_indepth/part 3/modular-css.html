@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Modular CSS</title>
+        <link rel="stylesheet" href="css/modular-css.css" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <!--To use a modifier, add both the main module class and the modifier class to an element-->
+            <div class="message message--success"><!--We've included a modifier "message--warning"-->
+                Save successful
+            </div>
+            
+            <!--Using Modifiers on buttons-->
+            <button class="button button--large">Read more</button> <!--Button module with large modifier-->
+            <button class="button button--success">Save</button> <!--Button module with success modifier-->
+            <button class="button button--danger button--small">Cancel</button> <!--Button module with danger and small modifier-->
+
+            <div class="media media--right"> <!--media--right modifier is used to create a new variant of the
+            media element where the media__image is floated to the right-->
+                <img class="media__image" src="images/runner.png">
+                <div class="media__body">
+                    <h4>Strength</h4>
+                    <p>
+                    Strength training is an important part of
+                    injury prevention. Focus on your core &mdash;
+                    especially your abs and glutes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Multiple modules combined to form one large module-->
+        <div class="dropdown">
+            <button class="dropdown__toggle">Main Menu</button>  <!--(Toggle button for the drop down)-->
+            <div class="dropdown__drawer">
+                <ul class="menu">  <!--(A Menu module placed inside the drawer)-->
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/coffees">Coffees</a></li>
+                    <li><a href="/brewers">Brewers</a></li>
+                    <li><a href="/specials">Specials</a></li>
+                    <li><a href="/about">About us</a></li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+           (function () {
+                var toggle =
+                document.querySelector('.dropdown__toggle');
+                toggle.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var dropdown = event.target.parentNode;
+                    dropdown.classList.toggle('is-open');
+                });
+           }());
+        </script>
+    </body>
+</html>
